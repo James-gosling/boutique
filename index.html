@@ -1101,6 +1101,12 @@
             }
             subtotalDiv.textContent = 'Subtotal: $' + subtotal + ' MXN';
 
+            document.querySelectorAll('button').forEach(function(btn) {
+            if (btn.textContent.trim().toLowerCase() === 'add to cart') {
+              btn.disabled = true;
+            }
+        });
+
             // Remove item event
             document.querySelectorAll('.cart-item-remove').forEach(btn => {
                 btn.onclick = function () {
