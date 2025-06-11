@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nova Erika - Brilla Diferente</title>
+    <title>ᑎOᐯᗩ</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@700&family=Poppins&display=swap');
 
@@ -49,7 +49,7 @@
         }
 
         header {
-            background-color: var(--accent-color);
+            background-color: #ecb7a0;
             color: var(--secondary-color);
             padding: 1.2rem 2rem;
             position: sticky;
@@ -71,8 +71,34 @@
             align-items: center;
         }
 
+        header .logo-image {
+            height: 45px;
+            margin-right: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        header .logo:hover .logo-image {
+            transform: scale(1.1);
+        }
+
+        /* Puedes mantener también el footer con el mismo logo */
+        footer .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer .logo-image {
+            height: 30px;
+            margin-right: 10px;
+        }
+
         header .star-icon {
-            color: var(--primary-color);
+            color: var(--hover-color);
             margin-right: 0.5rem;
             font-size: 2rem;
             transition: all 0.3s ease;
@@ -96,7 +122,7 @@
         }
 
         header .brand-name {
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(45deg, #A0522D, #8B0000);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -106,7 +132,7 @@
             font-family: var(--font-serif);
             font-style: italic;
             font-size: 1rem;
-            color: var(--primary-color);
+            color: var(--hover-color);
             margin-right: auto;
             margin-left: 1rem;
         }
@@ -116,6 +142,11 @@
             display: flex;
             margin: 0;
             padding: 0;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            /* Este es el color actual del texto del menú */
         }
 
         nav ul li {
@@ -156,9 +187,12 @@
             max-width: 600px;
         }
 
+        /* Gradiente para el nombre de la marca en el hero */
         .hero .brand-highlight {
             color: var(--primary-color);
             position: relative;
+            font-weight: bold;
+            padding: 0 5px;
         }
 
         .hero .brand-highlight::after {
@@ -176,7 +210,7 @@
             color: var(--star-color);
             transform: rotate(720deg) scale(1.2);
             opacity: 1;
-            text-shadow: 0 0 10px rgba(224, 169, 156, 0.6);
+            text-shadow: 0 0 10px rgba(168, 125, 115, 0.6);
         }
 
         .about {
@@ -317,7 +351,7 @@
         }
 
         footer {
-            background-color: var(--accent-color);
+            background-color: #ecb7a0;
             color: var(--secondary-color);
             padding: 1.5rem 2rem;
             text-align: center;
@@ -337,7 +371,7 @@
         footer .slogan {
             font-family: var(--font-serif);
             font-style: italic;
-            color: var(--primary-color);
+            color: var(--hover-color);
             margin: 0.5rem 0 1rem;
         }
 
@@ -389,7 +423,7 @@
 
     <header>
         <div class="logo">
-            <span class="star-icon">★</span>
+            <img src="https://i.imgur.com/KGtdF6I.png" alt="Logo Nova Erika" class="logo-image">
             <span class="brand-name">Nova Erika</span>
         </div>
         <div class="slogan">Brilla Diferente</div>
@@ -421,6 +455,7 @@
     <section class="products" id="products" aria-label="Catálogo de productos">
         <h2>Nuestro Catálogo</h2>
         <nav class="category-menu">
+            <a href="#vestidos-section" class="category-btn"><span>Vestidos</span></a>
             <a href="#aretes-section" class="category-btn"><span>Aretes</span></a>
             <a href="#pin-section" class="category-btn"><span>Pin</span></a>
             <a href="#pendiente-section" class="category-btn"><span>Pendiente</span></a>
@@ -430,19 +465,15 @@
             <a href="#conjuntos-section" class="category-btn"><span>Conjuntos</span></a>
             <a href="#pantalones-section" class="category-btn"><span>Pantalones</span></a>
             <a href="#combo-section" class="category-btn"><span>Combo</span></a>
-            <a href="#vestidos-section" class="category-btn"><span>Vestidos</span></a>
         </nav>
 
         <aside id="cart-preview">
             <h4>🛒 Carrito</h4>
             <div id="cart-items"></div>
             <div id="cart-subtotal">Subtotal: $0 MXN</div>
+            <button id="checkout-btn">Proceder a pagar</button>
         </aside>
 
-        <!-- Agrega este bloque justo ANTES de la sección Aretes,
-     dentro de <section class="products" id="products" ...>
-     para mostrar los 13 nuevos productos principales -->
-        <!-- Replace the existing products block with this enhanced version -->
         <h2 class="novedades-heading">✨ Novedades de la Semana ✨</h2>
         <p class="novedades-subtitle">¡Descubre nuestras últimas adquisiciones! Disponibilidad limitada.</p>
 
@@ -631,6 +662,119 @@
         z-index: 2;
     }
 </style>
+
+<style>
+    .pay-button {
+        width: 100%;
+        background: linear-gradient(to right, #bc343f, #e0a99c);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: 0.8rem 1.2rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(188, 52, 63, 0.2);
+    }
+
+    .pay-button:hover {
+        background: linear-gradient(to right, #a12d37, #d3917e);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(188, 52, 63, 0.3);
+    }
+
+    .pay-button:disabled {
+        background: #cccccc;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* Estilos para el modal de pago */
+    .payment-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .payment-content {
+        background: linear-gradient(135deg, #ffffff 0%, #f8e9e6 100%);
+        padding: 2rem;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .payment-content h3 {
+        color: #bc343f;
+        font-family: var(--font-heading);
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .payment-info {
+        background-color: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .payment-info p {
+        margin: 0.8rem 0;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .payment-info .highlight {
+        font-weight: 700;
+        color: #bc343f;
+    }
+
+    .payment-info .phone {
+        font-weight: 700;
+        color: #3c3c3c;
+        font-size: 1.2rem;
+    }
+
+    .thank-you {
+        font-family: var(--font-serif);
+        font-size: 1.4rem;
+        color: #e0a99c;
+        margin-top: 1.5rem;
+        font-style: italic;
+    }
+
+    .close-payment {
+        background-color: #e0a99c;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: 0.7rem 1.5rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .close-payment:hover {
+        background-color: #bc343f;
+        transform: translateY(-2px);
+    }
+</style>
+
 <style>
     .nuevo-producto {
         position: relative;
@@ -730,6 +874,200 @@
     }
 </style>
 
+<!-- Modal de Pago -->
+<div id="paymentModal" class="payment-modal">
+    <div class="payment-content">
+        <h3>Información de Pago</h3>
+        <div class="payment-info">
+            <p><span class="highlight">Entrega de pedidos:</span> Martes y Jueves</p>
+            <p><span class="highlight">Para pagar transferir a esta cuenta:</span> <br>
+                BBVA 1234 5678 9012 3456</p>
+            <p><span class="highlight">Mandar comprobante a este número:</span> <br>
+                <span class="phone">442 475 3837</span>
+            </p>
+        </div>
+        <p class="thank-you">¡Gracias por su compra!</p>
+        <button class="close-payment">Cerrar</button>
+    </div>
+</div>
+
+<!-- Sección Vestidos con Carrusel -->
+<section id="vestidos-section" class="category-section">
+    <h3 class="category-title">Vestidos de Graduación</h3>
+
+    <!-- Controles del carrusel principal -->
+    <div class="vestidos-controls">
+        <button class="vestido-prev">❮</button>
+        <button class="vestido-next">❯</button>
+    </div>
+
+    <div class="vestidos-carrusel-container">
+        <!-- Vestido Negro -->
+        <div class="vestido-item active" data-name="Vestido Negro Elegante" data-price="1400">
+            <div class="vestido-carousel">
+                <div class="vestido-images">
+                    <img src="https://i.imgur.com/O4fQElc.jpeg" alt="Vestido Negro - Vista 1" />
+                    <img src="https://i.imgur.com/HMSHkeO.jpeg" alt="Vestido Negro - Vista 2" />
+                    <img src="https://i.imgur.com/AdcTJji.jpeg" alt="Vestido Negro - Vista 3" />
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-info">
+                <h4>Vestido Negro Elegante</h4>
+                <p>Vestido de graduación en color negro, corte elegante y sofisticado, ideal para ceremonias formales.
+                </p>
+                <div class="product-price">$1400 MXN</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- Vestido Negro -->
+        <div class="vestido-item" data-name="Vestido Negro Noche Pedrería " data-price="1400">
+            <div class="vestido-carousel">
+                <div class="vestido-images">
+                    <img src="https://i.imgur.com/jojTPia.jpeg" alt="Vestido Negro - Vista 1" />
+                    <img src="https://i.imgur.com/8vpxmVR.jpeg" alt="Vestido Negro - Vista 2" />
+                    <img src="https://i.imgur.com/X5VaTR0.jpeg" alt="Vestido Negro - Vista 3" />
+                    <img src="https://i.imgur.com/PrYO8Jp.jpeg" alt="Vestido Negro - Vista 4" />
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-info">
+                <h4>Vestido Negro Noche Pedrería </h4>
+                <p>Vestido de graduación en color negro, corte elegante y sofisticado, ideal para ceremonias formales.
+                </p>
+                <div class="product-price">$1400 MXN</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- Vestido Azul -->
+        <div class="vestido-item" data-name="Vestido Azul Royal" data-price="1400">
+            <div class="vestido-carousel">
+                <div class="vestido-images">
+                    <img src="https://i.imgur.com/tcKx45l.jpeg" alt="Vestido Azul - Vista 1" />
+                    <img src="https://i.imgur.com/F4dy57M.jpeg" alt="Vestido Azul - Vista 2" />
+                    <img src="https://i.imgur.com/ZhbucOy.jpeg" alt="Vestido Azul - Vista 3" />
+                    <img src="https://i.imgur.com/ZTW2zmd.jpeg" alt="Vestido Azul - Vista 4" />
+                    <img src="https://i.imgur.com/yFelUdu.jpeg" alt="Vestido Azul - Vista 5" />
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-info">
+                <h4>Vestido Azul Royal</h4>
+                <p>Vestido de graduación en tono azul vibrante, diseño moderno con detalles elegantes.</p>
+                <div class="product-price">$1400 MXN</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- Vestido Verde -->
+        <div class="vestido-item" data-name="Vestido Verde Esmeralda" data-price="1400">
+            <div class="vestido-carousel">
+                <div class="vestido-images">
+                    <img src="https://i.imgur.com/6Y3k7S2.jpeg" alt="Vestido Verde - Vista 1" />
+                    <img src="https://i.imgur.com/ZWw0LAd.jpeg" alt="Vestido Verde - Vista 2" />
+                    <img src="https://i.imgur.com/HLgdQVC.jpeg" alt="Vestido Verde - Vista 3" />
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-info">
+                <h4>Vestido Verde Esmeralda</h4>
+                <p>Vestido de graduación en verde esmeralda, estilo fresco y juvenil con corte favorecedor.</p>
+                <div class="product-price">$1400 MXN</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- Vestido Amarillo -->
+        <div class="vestido-item" data-name="Vestido Amarillo Sol" data-price="900">
+            <div class="vestido-carousel">
+                <div class="vestido-images">
+                    <img src="https://i.imgur.com/1FrpHkt.jpeg" alt="Vestido Amarillo - Vista 1" />
+                    <img src="https://i.imgur.com/QWff3z3.jpeg" alt="Vestido Amarillo - Vista 2" />
+                    <img src="https://i.imgur.com/eUO4byT.jpeg" alt="Vestido Amarillo - Vista 3" />
+                    <img src="https://i.imgur.com/IYMRgrT.jpeg" alt="Vestido Amarillo - Vista 4" />
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-info">
+                <h4>Vestido Amarillo Sol</h4>
+                <p>Vestido de graduación en amarillo brillante, perfecto para destacar en tu día especial.</p>
+                <div class="product-price">$900 MXN</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- Vestido Amarillo Claro -->
+        <div class="vestido-item" data-name="Vestido Amarillo Pastel" data-price="900">
+            <div class="vestido-carousel">
+                <div class="vestido-images">
+                    <img src="https://i.imgur.com/gAicaN3.jpeg" alt="Vestido Amarillo Claro - Vista 1" />
+                    <img src="https://i.imgur.com/VizA181.jpeg" alt="Vestido Amarillo Claro - Vista 2" />
+                    <img src="https://i.imgur.com/eUO4byT.jpeg" alt="Vestido Amarillo Claro - Vista 3" />
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-info">
+                <h4>Vestido Amarillo Pastel</h4>
+                <p>Vestido de graduación en tono amarillo suave, delicado y elegante para ocasiones especiales.</p>
+                <div class="product-price">$900 MXN</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- Vestido Rojo -->
+        <div class="vestido-item" data-name="Vestido Rojo Pasión" data-price="1400">
+            <div class="vestido-carousel">
+                <div class="vestido-images">
+                    <img src="https://i.imgur.com/FOcR15w.jpeg" alt="Vestido Rojo - Vista 1" />
+                    <img src="https://i.imgur.com/MnyeRHH.jpeg" alt="Vestido Rojo - Vista 2" />
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-info">
+                <h4>Vestido Rojo Pasión</h4>
+                <p>Vestido de graduación en rojo intenso, diseño llamativo para momentos inolvidables.</p>
+                <div class="product-price">$1400 MXN</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- Vestido Rojo Oscuro -->
+        <div class="vestido-item" data-name="Vestido Rojo Oscuro" data-price="900">
+            <div class="vestido-carousel">
+                <div class="vestido-images">
+                    <img src="https://i.imgur.com/xrqhtGB.jpeg" alt="Vestido Rojo Oscuro - Vista 1" />
+                    <img src="https://i.imgur.com/NTRtqFY.jpeg" alt="Vestido Rojo Oscuro - Vista 2" />
+                    <img src="https://i.imgur.com/DBCxlnP.jpeg" alt="Vestido Rojo Oscuro - Vista 3" />
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-info">
+                <h4>Vestido Rojo Oscuro</h4>
+                <p>Vestido de graduación en rojo oscuro elegante, perfecto para ceremonias formales con estilo.</p>
+                <div class="product-price">$900 MXN</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Sección Aretes -->
 <section id="aretes-section" class="category-section">
@@ -1114,7 +1452,7 @@
                 <button class="add-to-cart-btn">Agregar al carrito</button>
             </div>
         </div>
-        
+
         <!-- Pantalones adicionales correctamente colocados dentro del product-grid -->
         <div class="product-card" data-name="Pantalón mezclilla encaje" data-price="Proximamente">
             <img src="https://i.imgur.com/QvJgtvy.jpeg" alt="Pantalón mezclilla con encaje" />
@@ -1125,7 +1463,7 @@
                 <button class="add-to-cart-btn">Agregar al carrito</button>
             </div>
         </div>
-        
+
         <div class="product-card" data-name="Pantalón mezclilla clásico" data-price="Proximamente">
             <img src="https://i.imgur.com/R2OIuII.jpeg" alt="Pantalón mezclilla clásico" />
             <div class="product-info">
@@ -1156,24 +1494,487 @@
     </div>
 </section>
 
-<!-- Sección Vestidos -->
-<section id="vestidos-section" class="category-section">
-    <h3 class="category-title">Vestidos</h3>
-    <div class="product-grid">
-        <div class="product-card" data-name="Vestido largo elegante" data-price="Proximamente">
-            <img src="https://i.imgur.com/3TW6DbL.jpeg" alt="Vestido largo elegante" />
-            <div class="product-info">
-                <h4>Vestido largo elegante</h4>
-                <p>Para eventos especiales.</p>
-                <div class="product-price">$ Proximamente</div>
-                <button class="add-to-cart-btn">Agregar al carrito</button>
-            </div>
-        </div>
-        <!-- ...agrega aquí el resto de vestidos usando las imágenes y precios como desees... -->
-    </div>
-</section>
-</section>
 
+<style>
+    /* Estilos para el carrusel de vestidos */
+    .vestidos-carrusel-container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .vestido-images {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        border-radius: 8px;
+        height: auto;
+        min-height: 450px;
+        background-color: #f9f9f9;
+    }
+
+    .vestido-images img {
+        width: 100%;
+        flex-shrink: 0;
+        height: auto;
+        max-height: 550px;
+        object-fit: contain !important;
+        /* Forzar contain con !important */
+        scroll-snap-align: start;
+        padding: 10px;
+        /* Añadir padding para mejor visualización */
+    }
+
+    /* Ajustes adicionales para mejorar la visualización del carrusel */
+    .vestido-carousel {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .vestido-item {
+        display: none;
+        width: 100%;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .vestido-item.active {
+        display: block;
+        animation: fadeIn 0.5s;
+    }
+
+    /* Eliminar cualquier estilo redundante o conflictivo */
+    .vestido-images img {
+        object-fit: contain !important;
+        /* Duplicado para mayor prioridad */
+        object-position: center;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0.5;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .vestido-carousel {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .vestido-images {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        border-radius: 8px;
+        height: 400px;
+    }
+
+    .vestido-images img {
+        width: 100%;
+        flex-shrink: 0;
+        height: 400px;
+        object-fit: cover;
+        scroll-snap-align: start;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.7);
+        color: #bc343f;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .carousel-prev {
+        left: 10px;
+    }
+
+    .carousel-next {
+        right: 10px;
+    }
+
+    .carousel-prev:hover,
+    .carousel-next:hover {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background: #bc343f;
+    }
+
+    /* Controles principales del carrusel de vestidos */
+    .vestidos-controls {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .vestido-prev,
+    .vestido-next {
+        background: #e0a99c;
+        color: white;
+        border: none;
+        font-size: 18px;
+        padding: 10px 15px;
+        margin: 0 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .vestido-prev:hover,
+    .vestido-next:hover {
+        background: #bc343f;
+    }
+
+    /* Estilo especial para los vestidos de graduación */
+    #vestidos-section .product-info h4 {
+        font-size: 1.4rem;
+        color: #bc343f;
+    }
+
+    #vestidos-section .product-info p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    #vestidos-section .product-price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #e0a99c;
+        margin: 10px 0 15px;
+    }
+
+    #vestidos-section .add-to-cart-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+
+    /* Mejoras para los botones "Agregar al carrito" */
+    .add-to-cart-btn {
+        margin-top: auto;
+        background: linear-gradient(to right, #e0a99c, #f5c6cb);
+        color: #3c3c3c;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: 0.8rem 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(224, 169, 156, 0.2);
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .add-to-cart-btn:hover {
+        background: linear-gradient(to right, #bc343f, #e0a99c);
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(188, 52, 63, 0.25);
+    }
+
+    .add-to-cart-btn:active {
+        transform: translateY(-1px);
+    }
+
+    .add-to-cart-btn:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent);
+        transition: left 0.7s;
+    }
+
+    .add-to-cart-btn:hover:before {
+        left: 100%;
+    }
+
+    /* Estilo especial para botones en productos nuevos */
+    .nuevo-producto .add-to-cart-btn {
+        background: linear-gradient(to right, #e0543d, #ff867c);
+        color: white;
+        font-weight: 700;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 6px 12px rgba(224, 84, 61, 0.25);
+    }
+
+    .nuevo-producto .add-to-cart-btn:hover {
+        background: linear-gradient(to right, #b1001a, #e0543d);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(177, 0, 26, 0.35);
+    }
+
+    /* Mejoras para los botones de navegación del carrusel */
+    .vestido-prev,
+    .vestido-next,
+    .carousel-prev,
+    .carousel-next {
+        background: #e0a99c;
+        color: white;
+        border: none;
+        font-size: 20px;
+        padding: 12px 18px;
+        margin: 0 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(224, 169, 156, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+    }
+
+    .vestido-prev:hover,
+    .vestido-next:hover,
+    .carousel-prev:hover,
+    .carousel-next:hover {
+        background: #bc343f;
+        transform: scale(1.1);
+        box-shadow: 0 6px 14px rgba(188, 52, 63, 0.4);
+    }
+
+    /* Mejoras para los botones de categoría */
+    .category-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 140px;
+        max-width: 160px;
+        min-height: 50px;
+        max-height: 55px;
+        background: linear-gradient(45deg, #e0a99c, #f5c6cb 80%);
+        color: #3c3c3c;
+        border-radius: 30px;
+        text-decoration: none;
+        margin: 0.8rem 0;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        border: none;
+        box-shadow: 0 4px 15px rgba(224, 169, 156, 0.15);
+        transition: all 0.3s ease;
+        padding: 0.8rem 1.5rem;
+        cursor: pointer;
+    }
+
+    .category-btn:hover,
+    .category-btn:focus {
+        background: linear-gradient(45deg, #bc343f, #e0a99c 80%);
+        color: #fff;
+        transform: translateY(-4px) scale(1.08);
+        box-shadow: 0 8px 20px rgba(188, 52, 63, 0.25);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const payButton = document.getElementById('checkout-btn');
+        const paymentModal = document.getElementById('paymentModal');
+        const closePaymentButton = document.querySelector('.close-payment');
+
+        // Actualizar estado del botón de pago
+        function updatePayButtonState() {
+            const hasItems = Object.keys(cart).length > 0;
+            payButton.disabled = !hasItems;
+
+            if (!hasItems) {
+                payButton.textContent = "Carrito vacío";
+            } else {
+                payButton.textContent = "Proceder al Pago";
+            }
+        }
+
+        // Modificar la función updateCartPreview para incluir la actualización del botón
+        const originalUpdateCartPreview = updateCartPreview;
+        updateCartPreview = function () {
+            originalUpdateCartPreview();
+            updatePayButtonState();
+        };
+
+        // Abrir modal de pago
+        payButton.addEventListener('click', function () {
+            if (!payButton.disabled) {
+                paymentModal.style.display = 'flex';
+                // Animación de entrada
+                paymentModal.style.opacity = 0;
+                setTimeout(() => {
+                    paymentModal.style.opacity = 1;
+                }, 10);
+            }
+        });
+
+        // Cerrar modal
+        closePaymentButton.addEventListener('click', function () {
+            paymentModal.style.opacity = 0;
+            setTimeout(() => {
+                paymentModal.style.display = 'none';
+            }, 300);
+        });
+
+        // Cerrar modal al hacer clic fuera del contenido
+        paymentModal.addEventListener('click', function (e) {
+            if (e.target === paymentModal) {
+                paymentModal.style.opacity = 0;
+                setTimeout(() => {
+                    paymentModal.style.display = 'none';
+                }, 300);
+            }
+        });
+
+        // Inicializar estado del botón
+        updatePayButtonState();
+    });
+</script>
+
+<script>
+    // Script para el carrusel de vestidos
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Inicializar todos los carruseles internos
+        document.querySelectorAll('.vestido-carousel').forEach(function (carousel) {
+            const images = carousel.querySelector('.vestido-images');
+            const prevBtn = carousel.querySelector('.carousel-prev');
+            const nextBtn = carousel.querySelector('.carousel-next');
+            const dotsContainer = carousel.querySelector('.carousel-dots');
+
+            // Crear puntos indicadores basados en la cantidad de imágenes
+            const imgCount = images.querySelectorAll('img').length;
+            for (let i = 0; i < imgCount; i++) {
+                const dot = document.createElement('div');
+                dot.className = i === 0 ? 'dot active' : 'dot';
+                dot.dataset.index = i;
+                dotsContainer.appendChild(dot);
+
+                // Agregar evento de clic a cada punto
+                dot.addEventListener('click', function () {
+                    scrollToImage(i);
+                });
+            }
+
+            // Funciones de navegación
+            function scrollToImage(index) {
+                const imgWidth = images.clientWidth;
+                images.scrollLeft = index * imgWidth;
+
+                // Actualizar puntos activos
+                dotsContainer.querySelectorAll('.dot').forEach((dot, i) => {
+                    dot.className = i === index ? 'dot active' : 'dot';
+                });
+            }
+
+            // Detectar cambio de imagen al hacer scroll
+            images.addEventListener('scroll', function () {
+                const scrollPosition = images.scrollLeft;
+                const imgWidth = images.clientWidth;
+                const currentIndex = Math.round(scrollPosition / imgWidth);
+
+                // Actualizar puntos activos
+                dotsContainer.querySelectorAll('.dot').forEach((dot, i) => {
+                    dot.className = i === currentIndex ? 'dot active' : 'dot';
+                });
+            });
+
+            // Eventos de los botones
+            prevBtn.addEventListener('click', function () {
+                const scrollPosition = images.scrollLeft;
+                const imgWidth = images.clientWidth;
+                const currentIndex = Math.round(scrollPosition / imgWidth);
+                if (currentIndex > 0) {
+                    scrollToImage(currentIndex - 1);
+                }
+            });
+
+            nextBtn.addEventListener('click', function () {
+                const scrollPosition = images.scrollLeft;
+                const imgWidth = images.clientWidth;
+                const currentIndex = Math.round(scrollPosition / imgWidth);
+                const maxIndex = images.querySelectorAll('img').length - 1;
+                if (currentIndex < maxIndex) {
+                    scrollToImage(currentIndex + 1);
+                }
+            });
+        });
+
+        // Navegación entre vestidos (carrusel principal)
+        const vestidoItems = document.querySelectorAll('.vestido-item');
+        const prevBtn = document.querySelector('.vestido-prev');
+        const nextBtn = document.querySelector('.vestido-next');
+        let currentIndex = 0;
+
+        function showVestido(index) {
+            vestidoItems.forEach((item, i) => {
+                item.classList.remove('active');
+                if (i === index) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        prevBtn.addEventListener('click', function () {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : vestidoItems.length - 1;
+            showVestido(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', function () {
+            currentIndex = (currentIndex < vestidoItems.length - 1) ? currentIndex + 1 : 0;
+            showVestido(currentIndex);
+        });
+    });
+</script>
 
 <style>
     .category-menu {
@@ -1415,7 +2216,7 @@
             div.innerHTML = `
                 <span class="cart-item-name">${name}</span>
                 <span class="cart-item-qty">x${item.qty}</span>
-                <span>$${item.qty * item.price} MXN</span>
+                <span>${item.price !== 0 ? '$' + (item.qty * item.price) + ' MXN' : 'Proximamente'}</span>
                 <button class="cart-item-remove" data-name="${name}" title="Eliminar">×</button>
             `;
             cartItemsDiv.appendChild(div);
@@ -1427,29 +2228,68 @@
 
         // Remove item event
         document.querySelectorAll('.cart-item-remove').forEach(btn => {
-            btn.onclick = function () {
+            btn.addEventListener('click', function () {
                 const n = this.getAttribute('data-name');
                 delete cart[n];
                 updateCartPreview();
-            }
+            });
         });
     }
 
-
     document.addEventListener('DOMContentLoaded', function () {
+        // Función para agregar productos al carrito
+        function addToCart(btn) {
+            // Buscar el contenedor padre (puede ser product-card o vestido-item)
+            const card = btn.closest('.product-card') || btn.closest('.vestido-item');
+            if (!card) return;
+
+            const name = card.getAttribute('data-name');
+            let priceText = card.getAttribute('data-price');
+            let price = 0;
+
+            // Comprobar si el precio es "Proximamente" o un valor numérico
+            if (priceText !== "Proximamente" && priceText !== "") {
+                price = parseInt(priceText);
+                if (isNaN(price)) price = 0;
+            }
+
+            if (!cart[name]) {
+                cart[name] = { qty: 1, price: price };
+            } else {
+                cart[name].qty += 1;
+            }
+            updateCartPreview();
+
+            // Animación de confirmación
+            const confirmText = document.createElement('div');
+            confirmText.className = 'add-confirmation';
+            confirmText.textContent = '✓ Agregado';
+            confirmText.style.position = 'absolute';
+            confirmText.style.top = '50%';
+            confirmText.style.left = '50%';
+            confirmText.style.transform = 'translate(-50%, -50%)';
+            confirmText.style.backgroundColor = 'rgba(188, 52, 63, 0.8)';
+            confirmText.style.color = 'white';
+            confirmText.style.padding = '10px 15px';
+            confirmText.style.borderRadius = '5px';
+            confirmText.style.zIndex = '10';
+            if (!card.style.position || card.style.position === 'static') {
+                card.style.position = 'relative';
+            }
+            card.appendChild(confirmText);
+
+            setTimeout(() => {
+                confirmText.remove();
+            }, 1500);
+        }
+
+        // Asignar evento click a todos los botones de agregar al carrito
         document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
             btn.addEventListener('click', function () {
-                const card = this.closest('.product-card');
-                const name = card.getAttribute('data-name');
-                const price = parseInt(card.getAttribute('data-price'));
-                if (!cart[name]) {
-                    cart[name] = { qty: 1, price: price };
-                } else {
-                    cart[name].qty += 1;
-                }
-                updateCartPreview();
+                addToCart(this);
             });
         });
+
         updateCartPreview();
     });
 </script>
@@ -1519,12 +2359,11 @@
 
 <footer>
     <div class="footer-logo">
-        <span class="star-icon">★</span> Nova Erika
+        <img src="https://i.imgur.com/KGtdF6I.png" alt="Logo Nova Erika" class="logo-image">
+        Nova Erika
     </div>
     <p class="slogan">Brilla Diferente</p>
     <p>&copy; 2024 Nova Erika. Todos los derechos reservados.</p>
-    <div class="socials" aria-label="Enlaces a redes sociales">
-    </div>
 </footer>
 
 <script>
