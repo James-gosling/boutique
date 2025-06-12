@@ -1,123 +1,430 @@
 <?php
 // ----- PRODUCT DATA -----
+// NUEVAS NOVEDADES DE LA SEMANA (2025-06-11)
+// Añade aquí las nuevas imágenes/productos de novedades
+$novedades = [
+  [
+    "img" => "https://i.imgur.com/rTZpIfC.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/FckldCf.png",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/DGQhS6c.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/zgKfaYo.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/bp5xWQs.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/IsPSnaU.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/eD7onOI.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/1nx12XV.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/BFlMElG.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/zQftcXG.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/YxaQB5a.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/HOUfH2k.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/s2EraWN.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/nzdCiww.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/nPsWi3x.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/JKpeHen.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/hx45LDX.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/gOR8fzU.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/800gDmK.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/TMdBJBR.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/avbo8LY.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/HF0lNiB.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/16jag9P.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/i8erL7I.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/Me3Ao5b.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/P4rzKGF.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/PmCfV8x.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/MzhrqVO.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/HfY7DZ9.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/phrxZFf.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/W1wXlXU.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/XTV061B.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/rHt2KmJ.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/RqXlMoY.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/GfTlpST.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/ZGOcOEz.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/36F1v6o.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/ecBxX90.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/X1GWBg9.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/SsnbA0i.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/QbebSKU.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ],
+  [
+    "img" => "https://i.imgur.com/RssCECz.jpeg",
+    "price" => "Proximamente, Aparta ya!!",
+    "category" => "novedad",
+    "week" => "2025-06-11",
+    "badge" => "¡Nuevo!"
+  ]
+];
+
+// ---- CATÁLOGO PRINCIPAL: Reubicando novedades anteriores ----
 $products = [
-  // NOVEDADES DE LA SEMANA
+  // BLazers
   [
     "name" => "Blazer Snoopy",
     "img" => "https://i.imgur.com/ZxgbPwe.jpeg",
     "desc" => "Blazer con diseño de Snoopy, estilo juvenil.",
-    "price" => "Próximamente",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "price" => "Muy pronto",
+    "category" => "blazers"
   ],
   [
     "name" => "Blazer rayas gris",
     "img" => "https://i.imgur.com/2pIhHWE.jpeg",
     "desc" => "Blazer con rayas grises, moderno y versátil.",
     "price" => "$600 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "blazers"
   ],
+
+  // BLUSAS
   [
     "name" => "Blusa azul y perlas plata",
     "img" => "https://i.imgur.com/ju7MX05.jpeg",
     "desc" => "Blusa azul con detalles de perlas en plata.",
     "price" => "$600 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "blusas"
   ],
+  [
+    "name" => "Blusa blanca",
+    "img" => "https://i.imgur.com/2PBF7cm.jpeg",
+    "desc" => "Blusa blanca con detalles, ideal para looks elegantes.",
+    "price" => "$520 MXN",
+    "category" => "blusas"
+  ],
+
+  // CINTURONES (accesorios)
   [
     "name" => "Cinturón",
     "img" => "https://i.imgur.com/e3Zs2yG.jpeg",
     "desc" => "Cinturón clásico, ideal para cualquier look.",
     "price" => "$500 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "accesorios"
   ],
   [
     "name" => "Cinturón café cuero",
     "img" => "https://i.imgur.com/WO2A5BG.jpeg",
     "desc" => "Cinturón de cuero café, elegante y resistente.",
     "price" => "$380 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "accesorios"
   ],
   [
     "name" => "Cinturón vaca",
     "img" => "https://i.imgur.com/ynDCwPY.jpeg",
     "desc" => "Cinturón con estampado de vaca, divertido y único.",
     "price" => "$400 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "accesorios"
   ],
+
+  // CONJUNTOS
   [
     "name" => "Conjunto blanco",
     "img" => "https://i.imgur.com/6I85NQV.jpeg",
     "desc" => "Conjunto blanco, fresco y moderno.",
     "price" => "$1200 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "conjuntos"
   ],
+  [
+    "name" => "Conjunto camisa y falda beige",
+    "img" => "https://i.imgur.com/WEsArle.png",
+    "desc" => "Conjunto de camisa y falda en beige, perfecto para la temporada.",
+    "price" => "$1100 MXN",
+    "category" => "conjuntos"
+  ],
+
+  // PANTALONES
   [
     "name" => "Pantalones broche dorado",
     "img" => "https://i.imgur.com/Ot5Rq8w.jpeg",
     "desc" => "Pantalones con broche dorado, detalle elegante.",
     "price" => "$700 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "pantalones"
   ],
   [
     "name" => "Pantalón negro",
     "img" => "https://i.imgur.com/L5Ciy0w.jpeg",
     "desc" => "Pantalón negro clásico, imprescindible.",
     "price" => "$750 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "pantalones"
   ],
   [
     "name" => "Pantalón verde",
     "img" => "https://i.imgur.com/E3FrLbQ.jpeg",
     "desc" => "Pantalón verde, perfecto para destacar.",
     "price" => "$750 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "pantalones"
   ],
   [
     "name" => "Pantalón azul",
     "img" => "https://i.imgur.com/64hlZgb.jpeg",
     "desc" => "Pantalón azul, moda actual.",
     "price" => "$800 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "pantalones"
+  ],
+  [
+    "name" => "Pantalón beige tiro alto",
+    "img" => "https://i.imgur.com/ypfM0xm.jpeg",
+    "desc" => "Pantalón beige de tiro alto, cómodo y elegante.",
+    "price" => "$850 MXN",
+    "category" => "pantalones"
   ],
   [
     "name" => "Pantalones colores",
     "img" => "https://i.imgur.com/m2dhaCT.jpeg",
     "desc" => "Pantalones de colores variados, estilo alegre.",
     "price" => "$1250 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "pantalones"
   ],
+
+  // FALDAS
+
+  // COLLAR (accesorios)
   [
     "name" => "Collar",
     "img" => "https://i.imgur.com/CG0pBFS.jpeg",
     "desc" => "Collar elegante, complemento ideal.",
     "price" => "$300 MXN",
-    "category" => "novedad",
-    "week" => "2025-06-09",
-    "badge" => "¡Nuevo!"
+    "category" => "accesorios"
   ],
 
   // VESTIDOS
@@ -157,7 +464,7 @@ $products = [
     "category" => "vestidos"
   ],
 
-  // ARETES (solo algunos, agrega todos los que desees)
+  // ARETES
   [
     "name" => "Aretes geométricos dorados",
     "img" => "https://i.imgur.com/HwqW0EG.jpeg",
@@ -228,22 +535,26 @@ $products = [
     "category" => "pulsera"
   ],
 
-  // ACCESORIOS
- 
-
-  // CALZADO
-
+  // ACCESORIOS y CALZADO quedan como categorías vacías listas para futuros productos
 ];
+
+// CATEGORÍAS (con nuevas categorías agregadas)
 $categories = [
   "todos" => "Todos",
   "novedad" => "Novedades",
+  "blazers" => "Blazers",
+  "blusas" => "Blusas",
+  "faldas" => "Faldas",
+  "pantalones" => "Pantalones",
+  "conjuntos" => "Conjuntos",
   "vestidos" => "Vestidos",
   "aretes" => "Aretes",
   "pin" => "Pin",
   "pendiente" => "Pendiente",
   "pulsera" => "Pulsera",
   "accesorios" => "Accesorios",
-  "calzado" => "Calzado"
+  "calzado" => "Calzado",
+  "shorts" => "Shorts"
 ];
 ?>
 <!DOCTYPE html>
@@ -695,14 +1006,14 @@ $categories = [
 
 <section class="about" id="about" aria-label="Acerca de la boutique">
   <h2>Acerca de Nova Erika</h2>
-  <p>Ubicada en el corazón de Querétaro, Nova Erika ofrece una selección cuidadosamente elegida de ropa moderna y accesorios para personas audaces y únicas. Nuestra pasión radica en crear moda para nuevos comienzos - ayudando a los jóvenes a expresar su individualidad a través de diseños geométricos y atrevidos que les hacen destacar. Cada pieza en nuestra colección está diseñada para ayudarte a brillar de manera diferente.</p>
+  <p>Ubicada en el corazón de Querétaro, Nova Erika ofrece una selección cuidadosamente elegida de ropa moderna y accesorios para personas audaces y únicas. Nuestra pasión radica en crear moda pa[...]
 </section>
 
-<!-- NOVEDADES DE LA SEMANA -->
+<!-- NOVEDADES DE LA SEMANA: SOLO NUEVAS NOVEDADES -->
 <section class="novedades-semana" id="novedades">
   <h2>✨ Novedades de la Semana ✨</h2>
   <div class="product-grid novedades-grid">
-    <?php foreach($products as $p): if($p['category'] !== "novedad") continue;?>
+    <?php foreach($novedades as $p): ?>
       <div class="product-card novedad" data-category="novedad" <?php if(isset($p['week'])): ?>data-week="<?= htmlspecialchars($p['week']) ?>"<?php endif;?>>
         <?php if(!empty($p['badge'])): ?>
           <span class="nuevo-badge"><?= htmlspecialchars($p['badge']) ?></span>
@@ -733,8 +1044,7 @@ $categories = [
     </div>
   </div>
   <div class="product-grid" id="catalog-product-grid">
-    <?php foreach($products as $p):
-      if($p['category']==='novedad') continue; ?>
+    <?php foreach($products as $p): ?>
       <div class="product-card" data-category="<?= htmlspecialchars($p['category']) ?>">
         <?php if(!empty($p['badge'])): ?>
           <span class="product-badge"><?= htmlspecialchars($p['badge']) ?></span>
